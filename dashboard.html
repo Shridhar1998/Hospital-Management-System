@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System - Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <h1>Hospital Management System</h1>
+        </div>
+        <div class="navbar-right">
+            <a href="register.html">Register</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="vaccinated.html">Vaccinated</a>
+            <a href="index.html" onclick="logout()">Logout</a>
+        </div>
+    </nav>
+    <div class="dashboard-container">
+        <h2>Dashboard</h2>
+        <div class="filters">
+            <!-- <div class="filter-group">
+                <label for="filterDate">Filter by Date:</label>
+                <input type="date" id="filterDate">
+            </div> -->
+            <div class="filter-group">
+                <label for="filterAge">Filter by Age:</label>
+                <input type="number" id="filterAge" placeholder="Age">
+            </div>
+            <div class="filter-group">
+                <label for="filterGender">Filter by Gender:</label>
+                <select id="filterGender">
+                    <option value="">All</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <button onclick="applyFilters()">Apply Filters</button>
+            <button onclick="clearFilters()">Clear Filters</button>
+        </div>
+        <table id="patientsTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Disease</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Patient data will be loaded here -->
+            </tbody>
+        </table>
+        <div id="noDataMessage" class="no-data-message">No patients found.</div>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Management System - Register Patient</title>
+    <link rel="stylesheet" href="css/register.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <h1>Hospital Management System</h1>
+      </div>
+      <div class="navbar-right">
+        <a href="register.html">Register</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="vaccinated.html">Vaccinated</a>
+        <a href="index.html" onclick="logout()">Logout</a>
+      </div>
+    </nav>
+    <div class="form-container">
+      <h2>Register Patient</h2>
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="patientName">Name:</label>
+          <input
+            type="text"
+            id="patientName"
+            placeholder="Enter patient name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="patientAge">Age:</label>
+          <input
+            type="number"
+            id="patientAge"
+            placeholder="Enter patient age"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="patientGender">Gender:</label>
+          <select id="patientGender" required>
+            <option value="">Select gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="patientDisease">Disease:</label>
+          <input
+            type="text"
+            id="patientDisease"
+            placeholder="Enter disease"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="patientContact">Contact Number:</label>
+          <input
+            type="number"
+            id="patientContact"
+            placeholder="Enter contact number"
+            required
+          />
+        </div>
+        <button type="submit">Register Patient</button>
+      </form>
+      <div id="message" class="message"></div>
+    </div>
+    <script src="js/register.js"></script>
+  </body>
+</html>
